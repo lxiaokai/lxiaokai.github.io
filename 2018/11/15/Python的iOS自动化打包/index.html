@@ -89,22 +89,22 @@
 
 
 
-<meta name="description" content="前言这段时间刚刚学习了一段时间的Python,加上自己是做iOS开发的,就想着用Python来做一个自动化打包,可以自动完成打包,上传到蒲公英,并且发送邮箱给测试人员. 一是可以减少打包功夫,二来可以练练手,结合自己的工作来输出一点东西.废话不多说,直接上代码…">
+<meta name="description" content="前言这段时间刚刚学习了一段时间的Python,加上自己是做iOS开发的,就想着用Python来做一个自动化打包,可以自动完成打包,上传到蒲公英,并且发送邮箱给测试人员. 一是可以减少打包功夫,二来可以练练手,结合自己的工作来输出一点东西.废话不多说,直接上代码… 原理就是使用xcodebuild来控制Xcode进行一系列的操作,从而完成打包的操作.">
 <meta name="keywords" content="Xcode,Python,自动化打包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python的iOS自动化打包">
 <meta property="og:url" content="http://yoursite.com/2018/11/15/Python的iOS自动化打包/index.html">
 <meta property="og:site_name" content="lxiaok&#39;s blog">
-<meta property="og:description" content="前言这段时间刚刚学习了一段时间的Python,加上自己是做iOS开发的,就想着用Python来做一个自动化打包,可以自动完成打包,上传到蒲公英,并且发送邮箱给测试人员. 一是可以减少打包功夫,二来可以练练手,结合自己的工作来输出一点东西.废话不多说,直接上代码…">
+<meta property="og:description" content="前言这段时间刚刚学习了一段时间的Python,加上自己是做iOS开发的,就想着用Python来做一个自动化打包,可以自动完成打包,上传到蒲公英,并且发送邮箱给测试人员. 一是可以减少打包功夫,二来可以练练手,结合自己的工作来输出一点东西.废话不多说,直接上代码… 原理就是使用xcodebuild来控制Xcode进行一系列的操作,从而完成打包的操作.">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1542278885347&di=41c8d874cfdcbc1fbd137bf1fc457cab&imgtype=0&src=http%3A%2F%2Fs2.dgtle.com%2Fforum%2F201810%2F01%2F115737mkggkkbm2o6u8tbk.jpg">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwly1fx8u0gobnaj30tx0lujvf.jpg">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwly1fx8uis0xxij30i003zq3c.jpg">
 <meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNbRwly1fx8ukd1di2j30du06edg8.jpg">
-<meta property="og:updated_time" content="2018-11-15T09:00:40.337Z">
+<meta property="og:updated_time" content="2018-11-15T09:02:18.593Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python的iOS自动化打包">
-<meta name="twitter:description" content="前言这段时间刚刚学习了一段时间的Python,加上自己是做iOS开发的,就想着用Python来做一个自动化打包,可以自动完成打包,上传到蒲公英,并且发送邮箱给测试人员. 一是可以减少打包功夫,二来可以练练手,结合自己的工作来输出一点东西.废话不多说,直接上代码…">
+<meta name="twitter:description" content="前言这段时间刚刚学习了一段时间的Python,加上自己是做iOS开发的,就想着用Python来做一个自动化打包,可以自动完成打包,上传到蒲公英,并且发送邮箱给测试人员. 一是可以减少打包功夫,二来可以练练手,结合自己的工作来输出一点东西.废话不多说,直接上代码… 原理就是使用xcodebuild来控制Xcode进行一系列的操作,从而完成打包的操作.">
 <meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1542278885347&di=41c8d874cfdcbc1fbd137bf1fc457cab&imgtype=0&src=http%3A%2F%2Fs2.dgtle.com%2Fforum%2F201810%2F01%2F115737mkggkkbm2o6u8tbk.jpg">
 
 
@@ -370,11 +370,11 @@
       
 
       
-        <p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1542278885347&di=41c8d874cfdcbc1fbd137bf1fc457cab&imgtype=0&src=http%3A%2F%2Fs2.dgtle.com%2Fforum%2F201810%2F01%2F115737mkggkkbm2o6u8tbk.jpg"></p>
+        <p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1542278885347&di=41c8d874cfdcbc1fbd137bf1fc457cab&imgtype=0&src=http%3A%2F%2Fs2.dgtle.com%2Fforum%2F201810%2F01%2F115737mkggkkbm2o6u8tbk.jpg" width="800"></p>
 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>这段时间刚刚学习了一段时间的Python,加上自己是做iOS开发的,就想着用Python来做一个自动化打包,可以自动完成打包,上传到蒲公英,并且发送邮箱给测试人员.</p>
 <p>一是可以减少打包功夫,二来可以练练手,结合自己的工作来输出一点东西.废话不多说,直接上代码…</p>
-<a id="more"></a>
 <h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>就是使用xcodebuild来控制Xcode进行一系列的操作,从而完成打包的操作.</p>
+<a id="more"></a>
 <p><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fx8u0gobnaj30tx0lujvf.jpg" width="500"></p>
 <h3 id="为什么要做这个？"><a href="#为什么要做这个？" class="headerlink" title="为什么要做这个？"></a>为什么要做这个？</h3><p>在我们日常开发的时候,特别是在内部测试的时间,有可能需要频繁的打包,打包的工作比较繁琐,需要等待点击下一步,选择之类,影响了开发的节奏.(开玩笑,我能有啥节奏…), 为什么不能直接运行,然后完成所有的操作呢?</p>
 <h3 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h3><p>从网上查找了一些关于xcodebuild来打包的资料,从而得到:</p>
