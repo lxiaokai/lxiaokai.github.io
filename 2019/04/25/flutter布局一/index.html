@@ -92,7 +92,7 @@
 <meta name="description" content="前言本文主要讲解flutter的布局的Container的基本使用和一些基础属性. 官方解释:A convenience widget that combines common painting, positioning, and sizing widgets.">
 <meta name="keywords" content="flutter">
 <meta property="og:type" content="article">
-<meta property="og:title" content="flutter布局一">
+<meta property="og:title" content="flutter布局(一) - Container">
 <meta property="og:url" content="http://yoursite.com/2019/04/25/flutter布局一/index.html">
 <meta property="og:site_name" content="lxiaok&#39;s blog">
 <meta property="og:description" content="前言本文主要讲解flutter的布局的Container的基本使用和一些基础属性. 官方解释:A convenience widget that combines common painting, positioning, and sizing widgets.">
@@ -100,9 +100,9 @@
 <meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1g2enmxsz2kj318g0ga754.jpg">
 <meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1g2eo2ehai5j308l0ay0sx.jpg">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79ly1fvrcnfjlfyj307307374b.jpg">
-<meta property="og:updated_time" content="2019-04-25T02:31:58.883Z">
+<meta property="og:updated_time" content="2019-04-25T02:47:27.712Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="flutter布局一">
+<meta name="twitter:title" content="flutter布局(一) - Container">
 <meta name="twitter:description" content="前言本文主要讲解flutter的布局的Container的基本使用和一些基础属性. 官方解释:A convenience widget that combines common painting, positioning, and sizing widgets.">
 <meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1g2enmxsz2kj318g0ga754.jpg">
 
@@ -140,7 +140,7 @@
 
 
 
-  <title>flutter布局一 | lxiaok's blog</title>
+  <title>flutter布局(一) - Container | lxiaok's blog</title>
   
 
 
@@ -304,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">flutter布局一</h1>
+          <h1 class="post-title" itemprop="name headline">flutter布局(一) - Container</h1>
         
 
         <div class="post-meta">
@@ -413,6 +413,7 @@
 </blockquote>
 <h3 id="官方代码示例"><a href="#官方代码示例" class="headerlink" title="官方代码示例"></a>官方代码示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Container(</span><br><span class="line">  constraints: BoxConstraints.expand(</span><br><span class="line">    height: Theme.of(context).textTheme.display1.fontSize * 1.1 + 200.0,</span><br><span class="line">  ),</span><br><span class="line">  padding: const EdgeInsets.all(8.0),</span><br><span class="line">  color: Colors.teal.shade700,</span><br><span class="line">  alignment: Alignment.center,</span><br><span class="line">  child: Text(&apos;Hello World&apos;, style: Theme.of(context).textTheme.display1.copyWith(color: Colors.white)),</span><br><span class="line">  foregroundDecoration: BoxDecoration(</span><br><span class="line">    image: DecorationImage(</span><br><span class="line">      image: NetworkImage(&apos;https://www.example.com/images/frame.png&apos;),</span><br><span class="line">      centerSlice: Rect.fromLTRB(270.0, 180.0, 1360.0, 730.0),</span><br><span class="line">    ),</span><br><span class="line">  ),</span><br><span class="line">  transform: Matrix4.rotationZ(0.1),</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 <h3 id="代码效果"><a href="#代码效果" class="headerlink" title="代码效果"></a>代码效果</h3><p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1g2eo2ehai5j308l0ay0sx.jpg" width="400"></p>
+<h3 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:flutter/material.dart&apos;;</span><br><span class="line"></span><br><span class="line">class LayoutDemo extends StatelessWidget &#123;</span><br><span class="line">  @override</span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    return new Scaffold(</span><br><span class="line">        appBar: new AppBar(</span><br><span class="line">          title: new Text(&apos;Container&apos;),</span><br><span class="line">        ),</span><br><span class="line">        body: Container(</span><br><span class="line">          constraints: BoxConstraints.expand(</span><br><span class="line">            height: Theme.of(context).textTheme.display1.fontSize * 1.1 + 200.0,</span><br><span class="line">          ),</span><br><span class="line">          padding: const EdgeInsets.all(8.0),</span><br><span class="line">          color: Colors.teal.shade700,</span><br><span class="line">          alignment: Alignment.center,</span><br><span class="line">          child: Text(&apos;Hello World&apos;,</span><br><span class="line">              style: Theme.of(context)</span><br><span class="line">                  .textTheme</span><br><span class="line">                  .display1</span><br><span class="line">                  .copyWith(color: Colors.white)),</span><br><span class="line">          foregroundDecoration: BoxDecoration(</span><br><span class="line">            image: DecorationImage(</span><br><span class="line">              image: NetworkImage(&apos;https://www.example.com/images/frame.png&apos;),</span><br><span class="line">              centerSlice: Rect.fromLTRB(270.0, 180.0, 1360.0, 730.0),</span><br><span class="line">            ),</span><br><span class="line">          ),</span><br><span class="line">          transform: Matrix4.rotationZ(0.1),</span><br><span class="line">        ));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void main() &#123;</span><br><span class="line">  runApp(</span><br><span class="line">    new MaterialApp(</span><br><span class="line">      title: &apos;Flutter教程&apos;,</span><br><span class="line">      home: new LayoutDemo(),</span><br><span class="line">    ),</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>大家有其他的更加快捷的方法，欢迎大家可以拿出来交流和讨论，谢谢。</p>
 <p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fvrcnfjlfyj307307374b.jpg"></p>
 
@@ -480,8 +481,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/27/iOS开发效率工具-UI界面调试神器/" rel="next" title="iOS开发效率工具-UI界面调试神器">
-                <i class="fa fa-chevron-left"></i> iOS开发效率工具-UI界面调试神器
+              <a href="/2019/04/25/flutter布局二/" rel="next" title="flutter布局(二) - Padding、Align、Center">
+                <i class="fa fa-chevron-left"></i> flutter布局(二) - Padding、Align、Center
               </a>
             
           </div>
@@ -610,7 +611,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -684,7 +685,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性"><span class="nav-number">2.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性说明："><span class="nav-number">3.</span> <span class="nav-text">属性说明：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#key"><span class="nav-number">3.0.1.</span> <span class="nav-text">key</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#alignment"><span class="nav-number">3.0.2.</span> <span class="nav-text">alignment</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#padding"><span class="nav-number">3.0.3.</span> <span class="nav-text">padding</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#color"><span class="nav-number">3.0.4.</span> <span class="nav-text">color</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#decoration"><span class="nav-number">3.0.5.</span> <span class="nav-text">decoration</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#foregroundDecoration"><span class="nav-number">3.0.6.</span> <span class="nav-text">foregroundDecoration</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#width"><span class="nav-number">3.0.7.</span> <span class="nav-text">width</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#height"><span class="nav-number">3.0.8.</span> <span class="nav-text">height</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#constraints"><span class="nav-number">3.0.9.</span> <span class="nav-text">constraints</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#margin"><span class="nav-number">3.0.10.</span> <span class="nav-text">margin</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#transform"><span class="nav-number">3.0.11.</span> <span class="nav-text">transform</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#child"><span class="nav-number">3.0.12.</span> <span class="nav-text">child</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#官方代码示例"><span class="nav-number">4.</span> <span class="nav-text">官方代码示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码效果"><span class="nav-number">5.</span> <span class="nav-text">代码效果</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性"><span class="nav-number">2.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性说明："><span class="nav-number">3.</span> <span class="nav-text">属性说明：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#key"><span class="nav-number">3.0.1.</span> <span class="nav-text">key</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#alignment"><span class="nav-number">3.0.2.</span> <span class="nav-text">alignment</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#padding"><span class="nav-number">3.0.3.</span> <span class="nav-text">padding</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#color"><span class="nav-number">3.0.4.</span> <span class="nav-text">color</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#decoration"><span class="nav-number">3.0.5.</span> <span class="nav-text">decoration</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#foregroundDecoration"><span class="nav-number">3.0.6.</span> <span class="nav-text">foregroundDecoration</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#width"><span class="nav-number">3.0.7.</span> <span class="nav-text">width</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#height"><span class="nav-number">3.0.8.</span> <span class="nav-text">height</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#constraints"><span class="nav-number">3.0.9.</span> <span class="nav-text">constraints</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#margin"><span class="nav-number">3.0.10.</span> <span class="nav-text">margin</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#transform"><span class="nav-number">3.0.11.</span> <span class="nav-text">transform</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#child"><span class="nav-number">3.0.12.</span> <span class="nav-text">child</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#官方代码示例"><span class="nav-number">4.</span> <span class="nav-text">官方代码示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码效果"><span class="nav-number">5.</span> <span class="nav-text">代码效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完整代码"><span class="nav-number">6.</span> <span class="nav-text">完整代码</span></a></li></ol></div>
             
 
           </div>
